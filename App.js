@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     return ref.onSnapshot((querySnapshot) => {
       const list = [];
-      querySnapshot.forEach((doc) => {
+      querySnapshot?.forEach((doc) => {
         const { title, complete } = doc.data();
         list.push({
           id: doc.id,
